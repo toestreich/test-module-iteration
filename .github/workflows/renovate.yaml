@@ -1,6 +1,7 @@
 name: Renovate
 on:
-  workflow_dispa
+  workflow_dispatch:
+  
 jobs:
   renovate:
     runs-on: ubuntu-latest
@@ -10,5 +11,4 @@ jobs:
       - name: Self-hosted Renovate
         uses: renovatebot/github-action@v39.0.0
         with:
-          configurationFile: example/renovate-config.js
           token: ${{ secrets.RENOVATE_TOKEN }}
